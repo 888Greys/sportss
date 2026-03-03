@@ -33,8 +33,8 @@
         <button
           class="py-3 rounded-md text-sm font-bold transition-all duration-150 active:scale-95
             {betslip.isSelected(match.id, side)
-              ? 'bg-neon text-black shadow-[0_0_12px_rgba(0,230,118,0.4)]'
-              : 'bg-chip text-white hover:bg-chip-hover'}"
+              ? 'bg-neon text-black shadow-[0_0_14px_rgba(0,230,118,0.45)] scale-[1.03]'
+              : 'bg-chip text-white hover:bg-chip-hover hover:shadow-[0_2px_8px_rgba(0,0,0,0.4)]'}"
           onclick={() => toggle(side)}
         >
           {match.odds[side].toFixed(2)}

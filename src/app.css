@@ -33,11 +33,78 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+/* ─── Smooth all interactive elements globally ─── */
+a, button {
+  transition: opacity 150ms ease, transform 150ms ease, background-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+
+a:active, button:active {
+  opacity: 0.82;
+}
+
+/* ─── Smooth scroll behaviour ─── */
+html {
+  scroll-behavior: smooth;
+}
+
 /* ─── Hide scrollbars on scroll navs ─── */
 .scroll-nav {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 .scroll-nav::-webkit-scrollbar {
   display: none;
+}
+
+/* ─── Page slide-in animation ─── */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* ─── Neon glow pulse (betslip FAB) ─── */
+@keyframes neonPulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(0,230,118,0.4); }
+  50%       { box-shadow: 0 0 24px rgba(0,230,118,0.75); }
+}
+.fab-glow {
+  animation: neonPulse 2s ease-in-out infinite;
+}
+
+/* ─── Live dot blink ─── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.25; }
+}
+.live-blink {
+  animation: blink 1.2s ease-in-out infinite;
+}
+
+/* ─── Odds button flash on select ─── */
+@keyframes oddFlash {
+  0%   { transform: scale(1);    }
+  40%  { transform: scale(1.06); }
+  100% { transform: scale(1);    }
+}
+.odd-flash {
+  animation: oddFlash 200ms ease-out;
+}
+
+/* ─── Skeleton shimmer for loading states ─── */
+@keyframes shimmer {
+  from { background-position: -400px 0; }
+  to   { background-position:  400px 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, #1c2738 25%, #26354a 50%, #1c2738 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.4s infinite linear;
+}
+
+/* ─── Promo banner shimmer sweep ─── */
+@keyframes shimmerBanner {
+  0%   { transform: translateX(-100%); }
+  60%  { transform: translateX(100%);  }
+  100% { transform: translateX(100%);  }
 }
