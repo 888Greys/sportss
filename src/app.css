@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* ─── Custom design-token colours ─── */
+@theme {
+  --color-canvas:      #0d131c;   /* main background        */
+  --color-panel:       #151d29;   /* header / nav bar       */
+  --color-shelf:       #0a0f16;   /* dark icon nav          */
+  --color-block:       #151e2b;   /* card background        */
+  --color-chip:        #1c2738;   /* odds button default    */
+  --color-chip-hover:  #26354a;   /* odds button hover      */
+
+  --color-neon:        #00e676;   /* accent green / selected */
+  --color-neon-soft:   #8bc34a;   /* deposit button          */
+  --color-golden:      #ffca28;   /* rocket FAB              */
+
+  --color-dim:         #8b9eb5;   /* muted text              */
+  --color-haze:        #8aa1c2;   /* secondary text / links  */
+  --color-live:        #ff3b30;   /* live / red indicators   */
+  --color-line:        #1e2a3b;   /* borders                 */
+
+  /* ── Aviator game ── */
+  --color-avi-red:     #e53935;
+  --color-avi-green:   #4caf50;
+  --color-avi-bg:      #050505;
+  --color-avi-dark:    #0d1218;
+  --color-avi-panel:   #21262d;
+  --color-avi-input:   #101418;
+  --color-avi-btn:     #2c323a;
+}
+
+/* ─── Global resets ─── */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ─── Hide scrollbars on scroll navs ─── */
+.scroll-nav {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scroll-nav::-webkit-scrollbar {
+  display: none;
+}
