@@ -43,7 +43,7 @@
 <!-- Sub nav -->
 <div class="scroll-nav flex overflow-x-auto whitespace-nowrap gap-5 px-4 py-3 bg-panel border-b border-line">
   {#each ['Shikisha', 'Jackpot', 'Virtual', 'Sababisha'] as link}
-    <a href="#" class="text-haze text-sm font-semibold no-underline">{link}</a>
+    <button class="text-haze text-sm font-semibold bg-transparent border-none cursor-pointer p-0">{link}</button>
   {/each}
 </div>
 
